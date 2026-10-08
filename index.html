@@ -11,19 +11,14 @@
 
 :root{
     --orange:#E97A22;
-    --orange-light:#FFF6ED;
+    --light-orange:#FFF7EF;
     --dark:#2F2F2F;
-    --grey:#666;
 }
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
 }
 
 body{
@@ -33,22 +28,15 @@ body{
 }
 
 nav{
-    position:fixed;
-    width:100%;
+    position:sticky;
     top:0;
     background:white;
-    padding:20px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    box-shadow:0 2px 15px rgba(0,0,0,0.08);
-    z-index:1000;
-}
-
-.logo{
-    font-size:1.2rem;
-    font-weight:700;
-    color:var(--orange);
+    padding:20px 8%;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    z-index:100;
 }
 
 nav ul{
@@ -63,6 +51,319 @@ nav a{
     font-weight:600;
 }
 
+.logo{
+    color:var(--orange);
+    font-weight:700;
+    font-size:1.2rem;
+}
+
 .hero{
-    min-height:100vh;
-    background:linear-gradient(135deg,#fff9f4,#
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+    padding:100px 8%;
+    background:linear-gradient(135deg,#FFF7EF,#FFE6CF);
+}
+
+.hero img{
+    width:320px;
+    height:420px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h1{
+    font-size:3.5rem;
+    color:var(--orange);
+}
+
+.hero-text h2{
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.button{
+    display:inline-block;
+    margin-top:20px;
+    margin-right:15px;
+    padding:12px 24px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.primary{
+    background:var(--orange);
+    color:white;
+}
+
+.secondary{
+    border:2px solid var(--orange);
+    color:var(--orange);
+}
+
+.section{
+    padding:80px 8%;
+}
+
+.section h2{
+    color:var(--orange);
+    margin-bottom:25px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.highlight{
+    background:var(--light-orange);
+}
+
+.publication{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    margin-bottom:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.publication a{
+    color:var(--orange);
+    text-decoration:none;
+    font-weight:600;
+}
+
+.contact-links{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-links a{
+    color:var(--orange);
+    text-decoration:none;
+    font-weight:600;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#f5f5f5;
+    color:#666;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+Evelyne Fraats
+</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#research">ResearchtionsPublications</a></li>
+<li><a href="#contacta></li>
+<li><a href="outreach.html/a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<img src="images/profile-professional class="hero-text">
+
+<h1>Evelyne Fraats</h1>
+
+<h2>Doctoral Researcher</h2>
+
+<p>
+ABOUT HERE
+</p>
+
+<a href="#Current Research
+</a>
+
+outreach.html
+Outreach
+</a>
+
+</div>
+
+</section>
+
+<section id="about" class="section">
+
+<h2>About Me</h2>
+
+<p>
+ABOUT HERE
+</p>
+
+</section>
+
+<section id="research" class="section">
+
+<h2>Current Research</h2>
+
+<p style="margin-bottom:30px;">
+CURRENT RESEARCH HERE
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>🧠 Social Neuroscience</h3>
+</div>
+
+<div class="card">
+<h3>⚖️ Moral Psychology</h3>
+</div>
+
+<div class="card">
+<h3>🤝 Sense of Agency</h3>
+</div>
+
+<div class="card">
+<h3>❤️ Empathy for Pain</h3>
+</div>
+
+<div class="card">
+<h3>⚡ Non-Invasive Brain Stimulation</h3>
+</div>
+
+<div class="card">
+<h3>📈 EEG</h3>
+</div>
+
+</div>
+
+</section>
+
+<section class="section highlight">
+
+<h2>Open Science</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>OSF Preregistration 1</h3>
+
+<p>
+Add description here.
+</p>
+
+#
+View on OSF
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>OSF Preregistration 2</h3>
+
+<p>
+Add description here.
+</p>
+
+<a hrefon OSF
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="publications" class="section">
+
+<h2>Publications</h2>
+
+<div class="publication">
+
+<h3>Publication 1</h3>
+
+<p>
+Add full citation here.
+</p>
+
+<p>
+<a href="https://scholar.google.com/citations?view_op=view_citation&hl=nl&user=23pqu9gAAAAJ&citation_for_view=23pqu9gAAAAJ:u-x6o8ySG0sC" target="_blank">
+View on Google Scholar
+</a>
+</p>
+
+</div>
+
+<div class="publication">
+
+<h3>Publication 2</h3>
+
+<p>
+Add full citation here.
+</p>
+
+<p>
+<a href="https://scholar.google.com/citations?view_op=view_citation&hl=nl&user=23pqu9gAAAAJ&citation_for_view=23pqu9gAAAAJ:2osOgNQ5qMEC" target="_blank">
+View on Google Scholar
+</a>
+</p>
+
+</div>
+
+</section>
+
+<section id="contact" class="section highlight">
+
+<h2>Contact</h2>
+
+<div class="contact-links">
+
+<div>
+📧 evelyne.fraats@ugent.be
+</div>
+
+<div>
+www.linkedin.com/in/evelynefraats-research-sciencecommunication-researchgoodsbads-moralbrain-socialbrain
+LinkedIn
+</a>
+</div>
+
+<div>
+https://orcid.org/0009-0003-7161-8705
+ORCID
+</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Evelyne Fraats
+</footer>
+
+</body>
+</html>
