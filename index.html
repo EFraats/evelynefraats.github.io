@@ -21,24 +21,28 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:"Segoe UI",sans-serif;
     color:var(--dark);
     line-height:1.8;
 }
 
-html{
-    scroll-behavior:smooth;
+a{
+    text-decoration:none;
 }
 
 nav{
     position:sticky;
     top:0;
     background:white;
+    padding:20px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 8%;
     box-shadow:0 2px 10px rgba(0,0,0,0.08);
     z-index:100;
 }
@@ -51,27 +55,22 @@ nav{
 
 nav ul{
     display:flex;
-    list-style:none;
     gap:25px;
+    list-style:none;
 }
 
 nav a{
     color:var(--dark);
-    text-decoration:none;
     font-weight:600;
-}
-
-a{
-    text-decoration:none;
 }
 
 .hero{
     display:flex;
-    justify-content:center;
     align-items:center;
-    gap:60px;
+    justify-content:center;
+    gap:50px;
     flex-wrap:wrap;
-    padding:100px 8%;
+    padding:80px 8%;
     background:linear-gradient(135deg,#FFF7EF,#FFE6CF);
 }
 
@@ -80,16 +79,17 @@ a{
     height:420px;
     object-fit:cover;
     border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 .hero-text{
-    max-width:650px;
+    max-width:700px;
 }
 
 .hero-text h1{
-    font-size:3.5rem;
     color:var(--orange);
+    font-size:3rem;
+    margin-bottom:10px;
 }
 
 .hero-text h2{
@@ -99,11 +99,11 @@ a{
 
 .button{
     display:inline-block;
-    margin-top:20px;
-    margin-right:15px;
     padding:12px 24px;
     border-radius:30px;
     font-weight:600;
+    margin-right:10px;
+    margin-top:20px;
 }
 
 .primary{
@@ -146,7 +146,7 @@ a{
     background:white;
     padding:25px;
     border-radius:20px;
-    margin-bottom:25px;
+    margin-bottom:20px;
     box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
@@ -173,6 +173,23 @@ footer{
     color:#666;
 }
 
+@media(max-width:900px){
+
+.hero{
+    text-align:center;
+}
+
+.hero img{
+    width:280px;
+    height:360px;
+}
+
+.hero-text h1{
+    font-size:2.4rem;
+}
+
+}
+
 </style>
 
 </head>
@@ -186,64 +203,54 @@ Evelyne Fraats
 </div>
 
 <ul>
-<li><a href="#about">About</a></li>
-chResearch</a></li>
-<li><a href="#publicationsons</a></li>
-<li><contactContact</a></li>
-<li><a href="outreach.html">Outreach</a></li>
+    <li>#aboutAbout</a></li>
+    <li>#researchResearch</a></li>
+    <li>#publicationsPublications</a></li>
+    <li>#contactContact</a></li>
+    <li><a href="outreach.html">Outreach</a></li>
 </ul>
 
 </nav>
 
-<section class="hero">
+<section class="hero" id="about">
 
-<img src="./images/profile-al.jpeg
+    ./images/profile-professional.jpeg
 
-<div class="hero-text">
+    <div class="hero-text">
 
-<h1>Evelyne Fraats</h1>
+        <h1>Evelyne Fraats</h1>
 
-<h2>Doctoral Researcher in Social Neuroscience</h2>
+        <h2>Doctoral Researcher in Social Neuroscience</h2>
 
-<p>
-Investigating the neurocognitive mechanisms underlying moral decision-making using concurrent EEG-tDCS in civilian and military populations.
-</p>
+        <p>
+            Hi, I'm Evelyne, a Doctoral Researcher in Social Neuroscience.
+            In my PhD research, I use concurrent EEG-tDCS to investigate the
+            neurocognitive mechanisms underlying moral decision-making in
+            civilian and military populations.
+        </p>
 
-#research
-Current Research
-</a>
+        <p>
+            Beyond my doctoral research, I am actively involved in science
+            communication. Through <strong>#ResearchGoodsBads</strong>, I aim
+            to show not only the successes of research, but also its challenges,
+            insecurities, setbacks, and rejections.
+        </p>
 
-<a href="outreach.html" class="button secondary">
-Outreach
-</a>
+        <p>
+            I also enjoy bringing neuroscience to broader audiences through blogs,
+            public engagement activities, and my science workshop
+            <em>The Cat That Makes the Brain Better</em>.
+        </p>
 
-</div>
+        #research
+            Current Research
+        </a>
 
-</section>
+        <a href="outreach.html" class="button secondary">
+            Outreach
+        </a>
 
-<section id="about" class="section">
-
-<h2>About Me</h2>
-
-<p>
-Hi, I'm Evelyne, a Doctoral Researcher in Social Neuroscience.
-</p>
-
-<p>
-In my PhD research, I use concurrent EEG-tDCS to investigate the neurocognitive processes underlying moral decision-making in both civilian and military populations. My work focuses on understanding how brain activity causally relates to the complex decisions people make in morally challenging situations.
-</p>
-
-<p>
-Beyond my doctoral research, I am actively involved in science communication. I am a strong advocate for showing the real side of research, not only the goods ☀️ such as publications, awards, and exciting discoveries, but also the bads 🌧️ including insecurities, setbacks, and rejections.
-</p>
-
-<p>
-Through openness, vulnerability, and a touch of cat humor, I aim to provide a more authentic view of academic life and scientific research. This philosophy is reflected in <strong>#ResearchGoodsBads</strong>, the hashtag I developed and use on LinkedIn.
-</p>
-
-<p>
-In addition, I enjoy bringing neuroscience to broader audiences through blogs, public engagement activities, and events for children. One of these initiatives is my science workshop <strong>The Cat That Makes the Brain Better</strong>, which introduces children to neuroscience, the brain, and brain stimulation through storytelling, creativity, and hands-on activities.
-</p>
+    </div>
 
 </section>
 
@@ -253,53 +260,62 @@ In addition, I enjoy bringing neuroscience to broader audiences through blogs, p
 
 <p>
 
-I started my PhD in 2024 at Ghent University in the Moral & Social Brain Lab under the supervision of Prof. Dr. Emilie A. Caspar.
+I started my PhD in 2024 at Ghent University in the Moral & Social Brain Lab,
+under the supervision of Prof. Dr. Emilie A. Caspar.
 
 </p>
+
+<br>
 
 <p>
 
-My doctoral research investigates the neurocognitive mechanisms that support resistance to immoral orders. Using concurrent EEG-tDCS, I examine the causal relationship between prosocial disobedience and neurocognitive processes such as empathy for pain and the sense of agency in civilian and military populations.
+My doctoral research investigates the neurocognitive mechanisms that support
+resistance to immoral orders. Using concurrent EEG-tDCS, I examine the causal
+relationship between prosocial disobedience and key neurocognitive processes,
+including empathy for pain and the sense of agency, in civilian and military
+populations.
 
 </p>
+
+<br>
 
 <p>
 
-My PhD is a collaboration between the Moral & Social Brain Lab (Ghent University, Belgium) and the Leibniz Research Centre for Working Environment and Human Factors (IfADo, Dortmund, Germany).
+My PhD is a collaboration between Ghent University and the Leibniz Research
+Centre for Working Environment and Human Factors (IfADo) in Dortmund, Germany.
+
+Additionally, I collaborate with the Royal Military Academy (Belgium) and the
+Faculty of Military Sciences (The Netherlands).
 
 </p>
 
-<p>
-
-In addition, I collaborate with the Royal Military Academy (Brussels, Belgium) and the Faculty of Military Sciences (Breda, The Netherlands) to study moral decision-making in military personnel.
-
-</p>
+<br>
 
 <div class="cards">
 
-<div class="card">
-<h3>🧠 Social Neuroscience</h3>
-</div>
+    <div class="card">
+        <h3>🧠 Social Neuroscience</h3>
+    </div>
 
-<div class="card">
-<h3>⚖️ Moral Psychology</h3>
-</div>
+    <div class="card">
+        <h3>⚖️ Moral Psychology</h3>
+    </div>
 
-<div class="card">
-<h3>🤝 Sense of Agency</h3>
-</div>
+    <div class="card">
+        <h3>🤝 Sense of Agency</h3>
+    </div>
 
-<div class="card">
-<h3>❤️ Empathy for Pain</h3>
-</div>
+    <div class="card">
+        <h3>❤️ Empathy for Pain</h3>
+    </div>
 
-<div class="card">
-<h3>⚡ Non-Invasive Brain Stimulation</h3>
-</div>
+    <div class="card">
+        <h3>⚡ Non-Invasive Brain Stimulation</h3>
+    </div>
 
-<div class="card">
-<h3>📈 EEG</h3>
-</div>
+    <div class="card">
+        <h3>📈 EEG</h3>
+    </div>
 
 </div>
 
@@ -311,45 +327,51 @@ In addition, I collaborate with the Royal Military Academy (Brussels, Belgium) a
 
 <div class="publication">
 
-<h3>Bartnik, Fraats & Groen (2025)</h3>
+    <h3>Bartnik, Fraats & Groen (2025)</h3>
 
-<p>
-Temporal misalignment in scene perception: divergent representations of locomotive action affordances in human brain responses and DNNs. Cognitive Computational Neuroscience Proceedings (CCN-P).
-</p>
+    <p>
+    Temporal misalignment in scene perception: divergent representations of locomotive
+    action affordances in human brain responses and DNNs.
+    Cognitive Computational Neuroscience Proceedings (CCN-P).
+    </p>
 
-<p>
-<a href="https://doi.org/10.32470/m4r6338" target="_blank">
-DOI
-</a>
-</p>
+    <p>
+        <a href="https://doi.org/10.32470/m4r6338" target="_blank">
+            DOI
+        </a>
+    </p>
 
-<p>
-<a href="https://scholar.google.com/citations?view_op=view_citation&hl=nl&user=23pqu9gAAAAJ&citation_for_view=23pqu9gAAAAJ:u-x6o8ySG0sC" target="_blank">
-View on Google Scholar
-</a>
-</p>
+    <p>
+        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=nl&user=23pqu9gAAAAJ&citation_for_view=23pqu9gAAAAJ:u-x6o8ySG0sC"
+           target="_blank">
+            View on Google Scholar
+        </a>
+    </p>
 
 </div>
 
 <div class="publication">
 
-<h3>Smekal, Solanas, Fraats & De Gelder (2024)</h3>
+    <h3>Smekal, Solanas, Fraats & De Gelder (2024)</h3>
 
-<p>
-Differential contributions of body form, motion, and temporal information to subjective action understanding in naturalistic stimuli. Frontiers in Integrative Neuroscience, 18, 1302960.
-</p>
+    <p>
+    Differential contributions of body form, motion, and temporal
+    information to subjective action understanding in naturalistic stimuli.
+    Frontiers in Integrative Neuroscience, 18, 1302960.
+    </p>
 
-<p>
-<a href="https://doi.org/10.3389/fnint.2024.1302960" target="_blank">
-DOI
-</a>
-</p>
+    <p>
+        <a href="https://doi.org/10.3389/fnint.2024.1302960" target="_blank">
+            DOI
+        </a>
+    </p>
 
-<p>
-<a href="https://scholar.google.com/citations?view_op=view_citation&hl=nl&user=23pqu9gAAAAJ&citation_for_view=23pqu9gAAAAJ:2osOgNQ5qMEC" target="_blank">
-View on Google Scholar
-</a>
-</p>
+    <p>
+        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=nl&user=23pqu9gAAAAJ&citation_for_view=23pqu9gAAAAJ:2osOgNQ5qMEC"
+           target="_blank">
+            View on Google Scholar
+        </a>
+    </p>
 
 </div>
 
@@ -361,26 +383,28 @@ View on Google Scholar
 
 <div class="contact-links">
 
-<div>
-📧
-<a href="mailto:evelyne.fraats@ugent.be">
-evelyne.fraats@ugent.be
-</a>
-</div>
+    <div>
+        📧
+        <a href="mailto:evelyne.fraats@ugent.be">
+            evelyne.fraats@ugent.be
+        </a>
+    </div>
 
-<div>
-🔗
-<a href="https://www.linkedin.com/in/evelynefraats-research-sciencecommunication-researchgoodsbads-moralbrain-socialbrain" target="_blank">
-LinkedIn
-</a>
-</div>
+    <div>
+        🔗
+        <a href="https://www.linkedin.com/in/evelynefraats-research-sciencecommunication-researchgoodsbads-moralbrain-socialbrain"
+           target="_blank">
+           LinkedIn
+        </a>
+    </div>
 
-<div>
-🔗
-<a href="https://orcid.org/0009-0003-7161-8705" target="_blank">
-ORCID
-</a>
-</div>
+    <div>
+        🔗
+        <a href="https://orcid.org/0009-0003-7161-8705"
+           target="_blank">
+           ORCID
+        </a>
+    </div>
 
 </div>
 
