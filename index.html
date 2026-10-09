@@ -66,33 +66,24 @@ nav a{
 
 .hero{
     display:flex;
-    align-items:center;
+    align-items:flex-start;
     justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
+    gap:60px;
     padding:80px 8%;
     background:linear-gradient(135deg,#FFF7EF,#FFE6CF);
 }
 
 .hero img{
-    width:320px;
-    height:420px;
-    object-fit:cover;
-    border-radius:20px;
+    width:450px;
+    max-width:100%;
+    height:auto;
+    border-radius:15px;
     box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    flex-shrink:0;
 }
-
-
-.hero img{
-    width:500px;
-    height:650px;
-    object-fit:cover;
-    border-radius:12px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.12);
-}
-``
 
 .hero-text{
+    flex:1;
     max-width:700px;
 }
 
@@ -103,9 +94,29 @@ nav a{
 }
 
 .hero-text h2{
-    font-weight:400;
     margin-bottom:20px;
+    font-weight:400;
 }
+
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .hero img{
+        width:280px;
+    }
+
+    .hero-text h1{
+        font-size:2.4rem;
+    }
+
+}
+    
+
 
 .button{
     display:inline-block;
@@ -222,45 +233,55 @@ Evelyne Fraats
 
 <section class="hero" id="about">
 
-    <img src="./images/profile-professional.jpeg" alt="Profile picture" class = "hero">
-
-    <div class="hero-text">
-
-        <h1>Evelyne Fraats</h1>
-
-        <h2>Doctoral Researcher in social neuroscience</h2>
+    <img src="./images/profile-professional.jpeg"
+         alt="Evelyne Fraats"
+         class="profile-image <h2>Doctoral Researcher in Social Neuroscience</h2>
 
         <p>
             Hi, I'm Evelyne, a Doctoral Researcher in social neuroscience.
-            In my PhD research, I use brainstimulation and brainrecording to investigate the
-            neurocognitive mechanisms underlying moral decision-making in
-            civilian and military populations. I have previously worked with corticospinal fMRI and motion data across a range of research topics, including emotional body processing, action affordances, and freezing responses.<br><br>
+            In my PhD research, I use brain stimulation and brain recording
+            to investigate the neurocognitive mechanisms underlying moral
+            decision-making in civilian and military populations.
         </p>
+
+        <br>
+
+        <p>
+            I have previously worked with corticospinal fMRI and motion data
+            across a range of research topics, including emotional body
+            processing, action affordances, and freezing responses.
+        </p>
+
+        <br>
 
         <p>
             Beyond my doctoral research, I am actively involved in science
             communication. Through #ResearchGoodsBads on LinkedIn, I aim
-            to show not only the "goods" of doing research, but also its "bads" such as the challenges,
-            insecurities, setbacks, and rejections.<br><br>
+            to show not only the successes of research, but also the
+            challenges, insecurities, setbacks, and rejections that are
+            part of the scientific journey.
         </p>
 
+        <br>
+
         <p>
-            I also enjoy bringing neuroscience to broader audiences through blogs,
-            public engagement activities, and my science workshop "
-            <em>The cat that makes the brain better</em>.
+            I also enjoy bringing neuroscience to broader audiences through
+            blogs, public engagement activities, and my workshop
+            <em>The Cat That Makes the Brain Better</em>.
         </p>
 
         <a href="outreach.html" class="button secondary">
             Outreach
         </a>
 
-        <a href="cat_workshop.html" class="button secondary">
-            Kids workshop
+        cat_workshop.html
+            Kids Workshop
         </a>
 
     </div>
 
 </section>
+    
 
 <section id="research" class="section">
 
