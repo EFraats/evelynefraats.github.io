@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,170 +9,371 @@
 
 <style>
 
-:root{
-    --green:#2D8A52;
-    --light-green:#F4FFF6;
+:root {
+    --green: #2D8A52;
+    --light-green: #F4FFF6;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:"Segoe UI",sans-serif;
-    line-height:1.8;
-    color:#2f2f2f;
-    background:white;
+html {
+    scroll-behavior: smooth;
 }
 
-nav{
-    position:sticky;
-    top:0;
-    background:white;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    z-index:100;
+body {
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.7;
+    color: #2f2f2f;
+    background: white;
+    overflow-wrap: break-word;
 }
 
-.logo{
-    color:var(--green);
-    font-weight:700;
-    font-size:1.2rem;
+/* Navigation */
+
+nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 16px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    z-index: 100;
 }
 
-nav ul{
-    display:flex;
-    gap:25px;
-    list-style:none;
+.logo {
+    color: var(--green);
+    font-weight: 700;
+    font-size: 1.15rem;
+    flex-shrink: 0;
 }
 
-nav a{
-    color:#2f2f2f;
-    font-weight:600;
-    text-decoration:none;
+nav ul {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+    flex-wrap: wrap;
 }
 
-@media(max-width:900px){
+nav a {
+    color: #2f2f2f;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
 
-    nav{
-        flex-direction:column;
-        gap:15px;
+/* Hero banner */
+
+.hero {
+    position: relative;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-green);
+}
+
+.hero > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 440px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.94);
+    padding: 24px 36px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 900px;
+    width: 86%;
+    margin: 35px auto;
+}
+
+.hero-logo {
+    width: min(220px, 65%);
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+.hero-text h1 {
+    color: var(--green);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* Main content */
+
+.section {
+    padding: 60px 8%;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 18px;
+    margin-bottom: 26px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    min-width: 0;
+}
+
+.card h2 {
+    color: var(--green);
+    font-size: 1.55rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.card p {
+    margin-bottom: 16px;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+.card ul {
+    padding-left: 24px;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+.card a {
+    overflow-wrap: anywhere;
+}
+
+/* Gallery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 12px;
+    background: #f5f5f5;
+    display: block;
+}
+
+/* Buttons */
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    background: var(--green);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    background: #f5f5f5;
+    color: #666;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    nav {
+        padding: 14px 5%;
     }
 
-    nav ul{
-        flex-wrap:wrap;
-        justify-content:center;
+    nav ul {
+        gap: 10px 16px;
     }
 
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero > img {
+        min-height: 400px;
+    }
+
+    .hero-text {
+        width: 90%;
+        padding: 22px 26px;
+    }
+
+    .section {
+        padding: 42px 5%;
+    }
+
+    .gallery {
+        gap: 12px;
+    }
 }
 
-.hero{
-    position:relative;
+/* Mobile phones */
+
+@media (max-width: 600px) {
+
+    /* Compact navigation */
+
+    nav {
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 5%;
+    }
+
+    .logo {
+        font-size: 1.05rem;
+    }
+
+    nav ul {
+        width: 100%;
+        gap: 8px 16px;
+    }
+
+    nav a {
+        font-size: 0.84rem;
+    }
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+        padding: 24px 0;
+        flex-direction: column;
+    }
+
+    .hero > img {
+        height: 100%;
+        min-height: 0;
+        object-position: center;
+    }
+
+    .hero-text {
+        width: 92%;
+        margin: 0 auto;
+        padding: 20px 16px;
+        border-radius: 15px;
+    }
+
+    .hero-logo {
+        width: min(170px, 70%);
+        max-height: 145px;
+        margin-bottom: 12px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(1.55rem, 6vw, 2rem);
+        line-height: 1.25;
+        margin-bottom: 12px;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Content and cards */
+
+    .section {
+        padding: 28px 4%;
+    }
+
+    .card {
+        padding: 20px 17px;
+        margin-bottom: 18px;
+        border-radius: 14px;
+    }
+
+    .card h2 {
+        font-size: 1.3rem;
+    }
+
+    .card p,
+    .card li {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    /* Gallery: two columns, full images */
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .gallery img {
+        aspect-ratio: auto;
+        height: auto;
+        object-fit: contain;
+        border-radius: 9px;
+    }
+
+    /* Buttons and footer */
+
+    .button {
+        padding: 11px 19px;
+    }
+
+    footer {
+        font-size: 0.85rem;
+    }
 }
 
-.hero img{
-    width:100%;
-    height:550px;
-    object-fit:cover;
-    display:block;
-}
+/* Very narrow phones */
 
-.hero-text{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    background:rgba(255,255,255,0.92);
-    padding:25px 40px;
-    border-radius:20px;
-    text-align:center;
-    max-width:1100px;
-    width:80%;
-}
+@media (max-width: 360px) {
 
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 
+    .hero-text {
+        padding: 18px 12px;
+    }
 
-.hero-logo{
-    max-width:270px;
-    max-height:270px;
-    display:block;
-    margin:0 auto 1px auto;
-    object-position:center top;
-}
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
 
-
-.hero-text h1{
-    color:var(--green);
-    font-size:2.4rem;
-    line-height:1.2;
-    margin-bottom:15px;
-}
-    
-
-.hero-text p{
-    font-size:1.15rem;
-}
-
-    
-
-.section{
-    padding:80px 8%;
-}
-
-.card{
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    margin-bottom:30px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.card h2{
-    color:var(--green);
-    margin-bottom:15px;
-    text-align:left !important;
-}
-
-.card ul{
-    padding-left:25px;
-}
-
-.gallery{
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:20px;
-}
-
-.gallery img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:15px;
-}
-
-
-
-.button{
-    display:inline-block;
-    margin-top:15px;
-    background:var(--green);
-    color:white;
-    padding:12px 24px;
-    border-radius:25px;
-    text-decoration:none;
-    font-weight:600;
-}
-
-footer{
-    text-align:center;
-    padding:30px;
-    background:#f5f5f5;
-    color:#666;
+    .card {
+        padding: 17px 14px;
+    }
 }
 
 </style>
@@ -187,34 +389,46 @@ footer{
 
     <ul>
         <li><a href="index.html">Research</a></li>
-        <li><a href="cat_workshop.html">Outreach - Kids workshop</a></li>
+        <li><a href="cat_workshop.html">Outreach: Kids workshop</a></li>
     </ul>
 
 </nav>
-    
+
+<!-- Hero section -->
+
 <div class="hero">
 
-    
-    <img src="./images/workshop-banner.jpeg" alt="examples previous workshop drawings">
+    <img
+        src="./images/workshop-banner.jpeg"
+        alt="Examples of drawings from previous workshops"
+    >
 
     <div class="hero-text">
-      
-        <img src="./images/workshop_logo.png"
-         alt="The Cat That Makes the Brain Better logo"
-         class="hero-logo">
 
-         <p>
-         <p>
+        <img
+            src="./images/workshop_logo.png"
+            alt="The Cat That Makes the Brain Better logo"
+            class="hero-logo"
+        >
 
-        <h1>The cat that makes the brain better | De kat die het brein beter maakt</h1>
+        <h1>
+            The cat that makes the brain better |
+            De kat die het brein beter maakt
+        </h1>
 
-        <p>Interactive neuroscience workshop (EN/NL) for children (10-14 years)</p>
+        <p>
+            Interactive neuroscience workshop (EN/NL) for children (10–14 years)
+        </p>
 
-        <p>Developed by Evelyne Fraats, doctoral researcher in social neuroscience</p>
+        <p>
+            Developed by Evelyne Fraats, doctoral researcher in social neuroscience
+        </p>
 
     </div>
 
 </div>
+
+<!-- Main content -->
 
 <div class="section">
 
@@ -225,20 +439,22 @@ footer{
         <p>
             In this workshop, children will discover how doctors and scientists can influence the brain.
             The ultimate goal is to inspire children about the human brain and how we can change it
-            to make people feel a "little better".<br><br>
+            to make people feel a "little better".
         </p>
 
         <p>
             Children will learn about different regions of the brain and explore innovative techniques used
-            to influence them. Guided by Evelyne Fraats, a doctoral researcher, and my cat Mittens,
+            to influence them. Guided by Evelyne Fraats, a doctoral researcher, and her cat Mittens,
             participants are taken on a fun and interactive storytelling journey into the fascinating world
-            of neuroscience.<br><br>
+            of neuroscience.
         </p>
 
         <p>
-            The workshop makes use of storytelling, creative painting activities, and hands-on experiments.<br><br>
+            The workshop makes use of storytelling, creative painting activities, and hands-on experiments.
+        </p>
 
-            The workshop was designed by Evelyne Fraats for an outreach project in the theme of her doctoral research work. <br><br>
+        <p>
+            The workshop was designed by Evelyne Fraats for a science outreach project related to her doctoral research.
         </p>
 
     </div>
@@ -250,8 +466,8 @@ footer{
         <ul>
             <li>🧠 What is the brain?</li>
             <li>🗺️ What are the different brain areas, and what roles do they play?</li>
-            <li>☹️ What are mental health disorders, such as depression? </li>
-            <li>🩺 How is the brain related to e.g. depression?</li>
+            <li>☹️ What are mental health disorders, such as depression?</li>
+            <li>🩺 How is the brain related to conditions such as depression?</li>
             <li>⚡ What is brain stimulation, and how can it influence the brain?</li>
             <li>🌟 How can brain stimulation help people with certain mental health disorders?</li>
         </ul>
@@ -275,14 +491,20 @@ footer{
 
         <h2>Practical information</h2>
 
-        <p>
         <ul>
-            <li>The workshop is available for schools, science festivals, and other public outreach activities across Belgium and the Netherlands.</li>
-            <li>The content can be adapted to different ages, educational levels, and audiences. The original workshop is designed for children aged 10-14 years.</li>           
-            <li>Available in Dutch and English</li>
-            <li>A small expense allowance is requested to cover travel costs, workshop materials, and preparation time. The allowance and the exact amount is open for discussion and can be adapted to the needs of the organization.</li>
+            <li>
+                The workshop is available for schools, science festivals, and other public outreach activities across Belgium and the Netherlands.
+            </li>
+            <li>
+                The content can be adapted to different ages, educational levels, and audiences.
+                The original workshop is designed for children aged 10–14 years.
+            </li>
+            <li>Available in Dutch and English.</li>
+            <li>
+                A small expense allowance is requested to cover travel costs, workshop materials, and preparation time.
+                The allowance and exact amount are open for discussion and can be adapted to the needs of the organization.
+            </li>
         </ul>
-        </p>
 
     </div>
 
@@ -292,9 +514,23 @@ footer{
 
         <div class="gallery">
 
-            <img src="./images/workshop1.jpeg" alt="examples previous workshop drawings">
-            <img src="./images/workshop2.jpeg" alt="examples previous workshop drawings">
-            <img src="./images/workshop3.jpeg" alt="examples previous workshop drawings">
+            <img
+                src="./images/workshop1.jpeg"
+                alt="Example of a drawing from a previous workshop"
+                loading="lazy"
+            >
+
+            <img
+                src="./images/workshop2.jpeg"
+                alt="Example of a drawing from a previous workshop"
+                loading="lazy"
+            >
+
+            <img
+                src="./images/workshop3.jpeg"
+                alt="Example of a drawing from a previous workshop"
+                loading="lazy"
+            >
 
         </div>
 
@@ -326,9 +562,11 @@ footer{
 
         <p>
             This workshop was developed as part of a science communication course organized by
-            <a href="https://scimingo.eu/nl/gezocht-brusselse-onderzoekers-voor-wetenschappers-de-klas"
-               target="_blank">
-               <strong>Scimingo.</strong></a>
+            <a
+                href="https://scimingo.eu/nl/gezocht-brusselse-onderzoekers-voor-wetenschappers-de-klas"
+                target="_blank"
+                rel="noopener noreferrer"
+            ><strong>Scimingo</strong></a>.
         </p>
 
     </div>
@@ -336,7 +574,7 @@ footer{
 </div>
 
 <footer>
-© 2026 Evelyne Fraats
+    © 2026 Evelyne Fraats
 </footer>
 
 </body>
